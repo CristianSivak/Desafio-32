@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include('../partials/head.ejs')%>
+    </head>
+
+    <body>
+        <div class="mt-3 m-0 row justify-content-center alert alert-success">
+            <h1 class="" role="alert">BIENVENIDO <%= user.displayName %></h1>
+            <div class="card" style="width: 18rem;">
+                <img src="<%= user.photos[0].value %>" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Locacion <%= user._json.location %></h5>
+                  <p class="card-text">Ultimo tuit <%= user._json.status.text %></p>
+                </div>
+              </div>
+            <form  method="get" action="/logout" >
+                <button class="btn btn-info" name="user" value="<%= user.displayName %>">Deslogueo</button>
+            </form>
+        </div>
+    </body>
+</html>

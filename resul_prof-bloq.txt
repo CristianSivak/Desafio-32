@@ -1,0 +1,112 @@
+Statistical profiling result from bloq.log, (3044 ticks, 2 unaccounted, 0 excluded).
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+   2643   86.8%          C:\WINDOWS\SYSTEM32\ntdll.dll
+    393   12.9%          C:\Program Files\nodejs\node.exe
+      2    0.1%          C:\WINDOWS\System32\KERNEL32.DLL
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+      1    0.0%   16.7%  LazyCompile: *validateEncoding internal/validators.js:193:26
+      1    0.0%   16.7%  LazyCompile: *next C:\Users\User\OneDrive\Documentos\Coder\clase-32\node_modules\express\lib\router\index.js:176:16
+      1    0.0%   16.7%  LazyCompile: *get data C:\Users\User\OneDrive\Documentos\Coder\clase-32\node_modules\express-session\session\cookie.js:117:11
+      1    0.0%   16.7%  LazyCompile: *<anonymous> internal/per_context/primordials.js:23:10
+
+ [C++]:
+   ticks  total  nonlib   name
+
+ [Summary]:
+   ticks  total  nonlib   name
+      4    0.1%   66.7%  JavaScript
+      0    0.0%    0.0%  C++
+     19    0.6%  316.7%  GC
+   3038   99.8%          Shared libraries
+      2    0.1%          Unaccounted
+
+ [C++ entry points]:
+   ticks    cpp   total   name
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 1.0% are not shown.
+
+   ticks parent  name
+   2643   86.8%  C:\WINDOWS\SYSTEM32\ntdll.dll
+
+    393   12.9%  C:\Program Files\nodejs\node.exe
+    312   79.4%    C:\Program Files\nodejs\node.exe
+    154   49.4%      LazyCompile: ~handleWriteReq internal/stream_base_commons.js:47:24
+    154  100.0%        LazyCompile: ~writeGeneric internal/stream_base_commons.js:143:22
+    154  100.0%          LazyCompile: ~Socket._writeGeneric net.js:759:42
+    154  100.0%            LazyCompile: ~Socket._write net.js:796:35
+     24    7.7%      LazyCompile: ~wrapSafe internal/modules/cjs/loader.js:969:18
+     24  100.0%        LazyCompile: ~Module._compile internal/modules/cjs/loader.js:1022:37
+     24  100.0%          LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1077:37
+     24  100.0%            LazyCompile: ~Module.load internal/modules/cjs/loader.js:921:33
+     19    6.1%      LazyCompile: ~realpathSync fs.js:1718:22
+     19  100.0%        LazyCompile: ~toRealPath internal/modules/cjs/loader.js:348:20
+     17   89.5%          LazyCompile: ~tryFile internal/modules/cjs/loader.js:339:17
+     14   82.4%            LazyCompile: ~tryExtensions internal/modules/cjs/loader.js:355:23
+      2   11.8%            LazyCompile: ~tryPackage internal/modules/cjs/loader.js:293:20
+      1    5.9%            LazyCompile: ~finalizeEsmResolution internal/modules/cjs/loader.js:891:31
+      2   10.5%          LazyCompile: ~Module._findPath internal/modules/cjs/loader.js:449:28
+      2  100.0%            LazyCompile: ~Module._resolveFilename internal/modules/cjs/loader.js:801:35
+     15    4.8%      LazyCompile: ~stat internal/modules/cjs/loader.js:133:14
+     12   80.0%        LazyCompile: ~tryFile internal/modules/cjs/loader.js:339:17
+     12  100.0%          LazyCompile: ~tryExtensions internal/modules/cjs/loader.js:355:23
+     11   91.7%            LazyCompile: ~Module._findPath internal/modules/cjs/loader.js:449:28
+      1    8.3%            LazyCompile: ~tryPackage internal/modules/cjs/loader.js:293:20
+      3   20.0%        LazyCompile: ~Module._findPath internal/modules/cjs/loader.js:449:28
+      3  100.0%          LazyCompile: ~Module._resolveFilename internal/modules/cjs/loader.js:801:35
+      3  100.0%            LazyCompile: ~Module._load internal/modules/cjs/loader.js:709:24
+     11    3.5%      C:\Program Files\nodejs\node.exe
+      5   45.5%        LazyCompile: ~prepareStackTrace internal/errors.js:59:27
+      5  100.0%          C:\Program Files\nodejs\node.exe
+      5  100.0%            LazyCompile: ~getErrorMessage C:\Users\User\OneDrive\Documentos\Coder\clase-32\node_modules\finalhandler\index.js:171:26
+      1    9.1%        LazyCompile: ~wrapSafe internal/modules/cjs/loader.js:969:18
+      1  100.0%          LazyCompile: ~Module._compile internal/modules/cjs/loader.js:1022:37
+      1  100.0%            LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1077:37
+      1    9.1%        LazyCompile: ~readPackage internal/modules/cjs/loader.js:245:21
+      1  100.0%          LazyCompile: ~resolveExports internal/modules/cjs/loader.js:427:24
+      1  100.0%            LazyCompile: ~Module._findPath internal/modules/cjs/loader.js:449:28
+      1    9.1%        LazyCompile: ~isFinished C:\Users\User\OneDrive\Documentos\Coder\clase-32\node_modules\on-finished\index.js:65:20
+      1  100.0%          LazyCompile: ~send C:\Users\User\OneDrive\Documentos\Coder\clase-32\node_modules\finalhandler\index.js:272:15
+      1  100.0%            LazyCompile: ~<anonymous> C:\Users\User\OneDrive\Documentos\Coder\clase-32\node_modules\finalhandler\index.js:86:19
+      1    9.1%        LazyCompile: ~expressInit C:\Users\User\OneDrive\Documentos\Coder\clase-32\node_modules\express\lib\middleware\init.js:29:30
+      1  100.0%          LazyCompile: ~handle C:\Users\User\OneDrive\Documentos\Coder\clase-32\node_modules\express\lib\router\layer.js:86:49
+      1  100.0%            LazyCompile: *next C:\Users\User\OneDrive\Documentos\Coder\clase-32\node_modules\express\lib\router\index.js:176:16
+      1    9.1%        LazyCompile: ~createHtmlDocument C:\Users\User\OneDrive\Documentos\Coder\clase-32\node_modules\finalhandler\index.js:43:29
+      1  100.0%          LazyCompile: ~write C:\Users\User\OneDrive\Documentos\Coder\clase-32\node_modules\finalhandler\index.js:273:18
+      1  100.0%            LazyCompile: ~listener C:\Users\User\OneDrive\Documentos\Coder\clase-32\node_modules\on-finished\index.js:161:20
+      1    9.1%        Eval: ~<anonymous> C:\Users\User\OneDrive\Documentos\Coder\clase-32\node_modules\mongoose\lib\aggregate.js:1:1
+      1  100.0%          LazyCompile: ~Module._compile internal/modules/cjs/loader.js:1022:37
+      1  100.0%            LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1077:37
+      9    2.9%      LazyCompile: ~writevGeneric internal/stream_base_commons.js:118:23
+      9  100.0%        LazyCompile: ~Socket._writeGeneric net.js:759:42
+      9  100.0%          LazyCompile: ~Socket._writev net.js:791:36
+      9  100.0%            LazyCompile: ~doWrite internal/streams/writable.js:367:17
+      6    1.9%      LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:270:27
+      6  100.0%        LazyCompile: ~nativeModuleRequire internal/bootstrap/loaders.js:303:29
+      1   16.7%          LazyCompile: ~setupPrepareStackTrace internal/bootstrap/node.js:252:32
+      1  100.0%            Eval: ~<anonymous> internal/bootstrap/node.js:1:1
+      1   16.7%          LazyCompile: ~get dns.js:325:8
+      1  100.0%            C:\Program Files\nodejs\node.exe
+      1   16.7%          Eval: ~<anonymous> stream.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:270:27
+      1   16.7%          Eval: ~<anonymous> internal/source_map/source_map_cache.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:270:27
+      1   16.7%          Eval: ~<anonymous> internal/bootstrap/node.js:1:1
+      1   16.7%          Eval: ~<anonymous> buffer.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:270:27
+      5    1.6%      LazyCompile: ~Hmac internal/crypto/hash.js:107:14
+      5  100.0%        LazyCompile: ~createHmac crypto.js:147:20
+      5  100.0%          LazyCompile: ~exports.sign C:\Users\User\OneDrive\Documentos\Coder\clase-32\node_modules\cookie-signature\index.js:16:24
+      4   80.0%            LazyCompile: ~setcookie C:\Users\User\OneDrive\Documentos\Coder\clase-32\node_modules\express-session\index.js:655:19
+      1   20.0%            LazyCompile: ~exports.unsign C:\Users\User\OneDrive\Documentos\Coder\clase-32\node_modules\cookie-signature\index.js:36:26
+      4    1.3%      LazyCompile: ~read internal/modules/package_json_reader.js:16:14
+      4  100.0%        LazyCompile: ~readPackage internal/modules/cjs/loader.js:245:21
+      4  100.0%          LazyCompile: ~resolveExports internal/modules/cjs/loader.js:427:24
+      4  100.0%            LazyCompile: ~Module._findPath internal/modules/cjs/loader.js:449:28
+

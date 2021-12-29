@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include('../partials/head.ejs')%>
+    </head>
+
+    <body>
+        <div class="container my-5">
+            <div class="jumbotron">
+                <h1>Registrar nuevo usuario</h1>
+                <br>
+                <form class="form" action="/signup" method="post" role="form" autocomplete="off">
+                    <div class="form-group">
+                        <label for="nombre">Ingrese su USUARIO</label>
+                        <input id="nombre" name='username' placeholder="nombre" class="form-control" type="text" required>
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="nombre">Ingrese su CONTRASEÑA</label>
+                        <input id="password"  name='password' placeholder="password" class="form-control" type="password" required>
+                    </div>
+    
+                    <div class="form-group">
+                        <input class="btn btn-success my-3" type="submit" value="Registrarse">
+                    </div>
+                </form>
+    
+                <hr>
+              
+                <div class="text-left">
+                    <button class="btn btn-success my-3" onclick="location.href = '/login'">Iniciar Sesión</button>
+                </div>
+          </div>
+      </div>
+    </body>
+
+</html>

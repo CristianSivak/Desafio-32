@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include('../partials/head.ejs')%>
+    </head>
+
+    <body>
+
+        <div class="container mt-3">
+            <div class="jumbotron">
+                <h1>Sign in</h1>
+                <br>
+                <form action="/login" method="post" autocomplete="off">
+                    <div class="form-group">
+                        <label for="nombre">Ingrese su USUARIO</label>
+                        <input id="nombre" name="username" class="form-control" type="text" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="nombre">Ingrese su CONTRASEÑA</label>
+                        <input id="password" name="password" class="form-control" type="password" required>
+                    </div>
+                    <div class="form-group">
+                        <input class="btn btn-success my-3" type="submit" value="Login">
+                    </div>
+                    <div class="text-left">
+                        <button class="btn btn-info my-3" onclick="location.href = '/auth/twitter'">Ingresar con Twitter</button>
+                    </div>
+    
+                    <hr>
+                    <div class="text-left">
+                        <button class="btn btn-success my-3" onclick="location.href = '/signup'">Registrarse</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </body>
+</html>
